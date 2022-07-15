@@ -4,9 +4,9 @@ Golang package to handle Thai Industrial Standard 620 (tis620) characters.
 ## Example
     import "github.com/tupkung/tis620"
 
-    utf8 := tis620.ToUTF8(tis620bytes)
+    utf_8 := tis620.ToUTF8(tis620bytes)
 
-    tis620 := tis620.ToTIS620(utf8runes)
+    tis_620 := tis620.ToTIS620(utf8runes)
 
 ## References
 * https://th.wikipedia.org/wiki/TIS-620
