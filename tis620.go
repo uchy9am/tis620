@@ -35,6 +35,17 @@ func ToTIS620(utf8bytes []rune) []byte {
 	return output
 }
 
+func CheckTIS620(data []byte) bool {
+
+	for _, chr := range data {
+		if !isTIS620Char(chr) {
+			return false
+		}
+	}
+
+	return true
+}
+
 func isUTFThaiChar(chr rune) bool {
 	return (chr >= 0xE01 && chr <= 0xE3A) || (chr >= 0xE3F && chr <= 0xE5B)
 }
@@ -45,4 +56,8 @@ func isUTFEngChar(chr rune) bool {
 
 func isTIS620ThaiChar(c byte) bool {
 	return (c >= 0xA1 && c <= 0xDA) || (c >= 0xDF && c <= 0xFB)
+}
+
+func isTIS620Char(c byte) bool {
+	return (c >= 0x01 && c <= 0x7E) || (c >= 0xA1 && c <= 0xDA) || (c >= 0xDF && c <= 0xFB)
 }

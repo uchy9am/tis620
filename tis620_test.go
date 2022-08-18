@@ -27,3 +27,25 @@ func TestTIS620(t *testing.T) {
 
 	os.WriteFile("utf-8-text.txt", ut8, 0600)
 }
+
+func TestCheckTIS620(t *testing.T) {
+	b, err := os.ReadFile("utf-8-text.txt")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if tis620.CheckTIS620(b) {
+		t.Error("Can't check utf-8 = false")
+	}
+
+	b2, err := os.ReadFile("tis-620-text.txt")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if !tis620.CheckTIS620(b2) {
+		t.Error("Can't check tis-620 = true")
+	}
+
+	t.Log("Success")
+}
