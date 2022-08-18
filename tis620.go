@@ -51,7 +51,7 @@ func isUTFThaiChar(chr rune) bool {
 }
 
 func isUTFEngChar(chr rune) bool {
-	return (chr >= 0x01) && (chr <= 0x7E)
+	return (chr >= 0x20) && (chr <= 0x7E)
 }
 
 func isTIS620ThaiChar(c byte) bool {
@@ -59,5 +59,5 @@ func isTIS620ThaiChar(c byte) bool {
 }
 
 func isTIS620Char(c byte) bool {
-	return (c >= 0x01 && c <= 0x7E) || (c >= 0xA1 && c <= 0xDA) || (c >= 0xDF && c <= 0xFB)
+	return (c >= 0x20 && c <= 0x7E) || (c >= 0xA1 && c <= 0xDA) || (c >= 0xDF && c <= 0xFB)
 }
