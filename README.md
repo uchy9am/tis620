@@ -1,3 +1,4 @@
+*(backup repo)
 # tis620
 Golang package to handle Thai Industrial Standard 620 (tis620) characters.
 
@@ -22,6 +23,6 @@ Golang package to handle Thai Industrial Standard 620 (tis620) characters.
 * https://www.utf8-chartable.de/unicode-utf8-table.pl?start=3584&number=128&utf8=0x
 
 ## Credits
-* https://github.com/tupkung/tis620 (folk)
+* https://github.com/tupkung/tis620 (fork)
 * https://github.com/varokas/tis620
 * https://github.com/pallat/tis620
