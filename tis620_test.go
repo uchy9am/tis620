@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/tupkung/tis620"
+	"github.com/uchy9am/tis620"
 )
 
 func TestUTF8(t *testing.T) {
